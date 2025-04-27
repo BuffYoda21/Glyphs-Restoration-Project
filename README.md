@@ -11,11 +11,12 @@ Steam: https://store.steampowered.com/app/3616230/GLYPHS/
 Restores the game's original ending.
 
 Implemented:
-- Sets the region to active and moves it to a place where you can see it on the map (bottom right corner)
+- Sets the region to active and moves it to a place where you can see it on the map in the bottom right corner (compatable with Glyphs v1.2+)
+- Fixes camera bug when entering the lava rising room (only compatable with Glyphs v1.2 - v1.6 for now)
 
 Planned:
 - Updates save button logic so you can warp there
-- Fixes camera glitch when activating a certain trigger
+- Update LavaRising trigger so the door closes propperly and boss preforms it's propper animation
 - Fixes boss hitbox
 - Adds some sort of logic making the area reachable in normal gameplay (Right now you need a tool like UnityExplorer to get there)
 
