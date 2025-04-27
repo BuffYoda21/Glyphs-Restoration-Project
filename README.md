@@ -10,13 +10,13 @@ Steam: https://store.steampowered.com/app/3616230/GLYPHS/
 # Old Ending Restoration
 Restores the game's original ending.
 
-Implemented:
-- Sets the region to active and moves it to a place where you can see it on the map in the bottom right corner (compatable with Glyphs v1.2+)
-- Fixes camera bug when entering the lava rising room (only compatable with Glyphs v1.2 - v1.6 for now)
+## Implemented:
+- Sets the region to active and moves it to a place where you can see it on the map in the bottom right corner (compatible with Glyphs v1.2+)
+- Fixes camera bug when entering the lava rising room (only compatible with Glyphs v1.2 - v1.6 for now)
 
-Planned:
+## Planned:
 - Updates save button logic so you can warp there
-- Update LavaRising trigger so the door closes propperly and boss preforms it's propper animation
+- Update LavaRising trigger so the door closes properly, and boss preforms it's proper animation
 - Fixes boss hitbox
 - Adds some sort of logic making the area reachable in normal gameplay (Right now you need a tool like UnityExplorer to get there)
 
