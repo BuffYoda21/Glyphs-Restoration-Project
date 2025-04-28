@@ -14,12 +14,12 @@ Restores the game's original ending.
 - Sets the region to active and moves it to a place where you can see it on the map in the bottom right corner (compatible with Glyphs v1.2+)
 - Adds a floor to the start of the region and a save button that is always active (compatible with Glyphs v1.2+)
 - Fixes camera bug when entering the lava rising room (only compatible with Glyphs v1.2 - v1.6 for now)
+- Updates pre-existing save button logic so you can warp to it
+- Adds logic that makes the region acessable after all 15 silver shards are collected
 
 ## Planned:
-- Update pre-existing save button logic so you can warp to it
 - Update LavaRising trigger so the door closes properly, and boss preforms it's proper animation
 - Fix boss hitbox
-- Add some sort of logic to unlocking the save button at the beginning of the region
 
 # Shattered Region Restoration
 Planned but not started
