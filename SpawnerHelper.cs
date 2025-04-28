@@ -1,8 +1,6 @@
 using MelonLoader;
 using UnityEngine;
-using HarmonyLib;
-
-namespace OldEndingRestoration.Helpers {
+namespace OldEndingRestoration.helpers {
     public static class SpawnerHelper {
         public static GameObject CloneAndPlace(string originalPath, string newName, string parentPath, Vector3 position) {
             GameObject original = GameObject.Find(originalPath);
