@@ -11,11 +11,11 @@ Steam: https://store.steampowered.com/app/3616230/GLYPHS/
 Restores the game's original ending.
 
 ## Implemented:
-- Sets the region to active and moves it to a place where you can see it on the map in the bottom right corner (compatible with Glyphs v1.2+)
-- Adds a floor to the start of the region and a save button that is always active (compatible with Glyphs v1.2+)
-- Fixes camera bug when entering the lava rising room (only compatible with Glyphs v1.2 - v1.6 for now)
+- Sets the region to active and moves it to a place where you can see it on the map in the bottom right corner
+- Adds a floor to the start of the region and a save button that is always active
+- Fixes camera bug when entering the lava rising room
 - Updates pre-existing save button logic so you can warp to it
-- Adds logic that makes the region acessable after all 15 silver shards are collected
+- Adds logic that makes the region accessible after all 15 silver shards are collected
 
 ## Planned:
 - Update LavaRising trigger so the door closes properly, and boss preforms it's proper animation
