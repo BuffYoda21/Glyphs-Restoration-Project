@@ -12,13 +12,14 @@ Restores the game's original ending.
 
 ## Implemented:
 - Sets the region to active and moves it to a place where you can see it on the map in the bottom right corner (compatible with Glyphs v1.2+)
+- Adds a floor to the start of the region and a save button that is always active (compatible with Glyphs v1.2+)
 - Fixes camera bug when entering the lava rising room (only compatible with Glyphs v1.2 - v1.6 for now)
 
 ## Planned:
-- Updates save button logic so you can warp there
+- Update pre-existing save button logic so you can warp to it
 - Update LavaRising trigger so the door closes properly, and boss preforms it's proper animation
-- Fixes boss hitbox
-- Adds some sort of logic making the area reachable in normal gameplay (Right now you need a tool like UnityExplorer to get there)
+- Fix boss hitbox
+- Add some sort of logic to unlocking the save button at the beginning of the region
 
 # Shattered Region Restoration
 Planned but not started
