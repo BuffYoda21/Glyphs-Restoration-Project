@@ -1,13 +1,13 @@
-﻿using MelonLoader;
+using MelonLoader;
 using UnityEngine;
-using HarmonyLib;
-using OldEndingRestoration.Helpers;
+using OldEndingRestoration.helpers;
+using System.Collections;
 
-[assembly: MelonInfo(typeof(OldEndingRestoration.OnLoad), "OldEndingRestoration", "0.3.0", "BuffYoda21")]
+[assembly: MelonInfo(typeof(OldEndingRestoration.primary.OnLoad), "OldEndingRestoration", "0.4.0", "BuffYoda21")]
 [assembly: MelonGame("J Daimond", "Glyphs")]
 [assembly: MelonGame("Vortex Bros.", "GLYPHS")]
 
-namespace OldEndingRestoration {
+namespace OldEndingRestoration.primary {
     public class OnLoad : MelonMod {
         public static HarmonyLib.Harmony instance;
         
@@ -19,6 +19,7 @@ namespace OldEndingRestoration {
 
         public override void OnSceneWasLoaded(int buildIndex, string sceneName) {
             if (sceneName == "Game") {
+                CustomSaveManager.Initialize();
                 MelonLogger.Msg("Restoring Regions...");
                 bool restoreSuc = false;
                 GameObject world = GameObject.Find("World");
@@ -48,17 +49,33 @@ namespace OldEndingRestoration {
                             "/World/Ending (old)/End1",
                             new Vector3(703f,-342f,0f)
                         ).transform.Find("TPIndicator").gameObject;
-                        
-                        if (true) { //logic check in .json file for if the button should be active
+
+                        if (CustomSaveManager.GetOldEndingSave1()) {
                             save1.SetActive(true);
-                        } else {
+                            MelonCoroutines.Start(DelayMapReveal());
+                        }
+                        else {
                             save1.SetActive(false);
                         }
+
+                        GameObject.Find("/World/Ending (old)/End6/Save Button (2)").SetActive(false);
+                        GameObject.Find("/World/Ending (old)/End6/Save Button (2)").name = "Save Button (old)";
+                        SpawnerHelper.CloneAndPlace(
+                            "/World/Region1/(R3A)/Save Button (HDD)",
+                            "Save Button (new)",
+                            "/World/Ending (old)/End6",
+                            new Vector3(770.75f,-292.613f,10f)
+                        ); //Save button placed here is active whenever the first save button on the map is. Intentionally left unfinished for now. Maybe I'll fix it later but for now I am tired.
                     }
                 } else {
                     MelonLogger.Warning("Failed to find /World");
                 }
             }
+        }
+
+        private static IEnumerator DelayMapReveal() {
+            yield return new WaitForSeconds(0.2f);
+            GameObject.Find("/MapManager/Tile 29,25").SetActive(false);
         }
     }
 }
