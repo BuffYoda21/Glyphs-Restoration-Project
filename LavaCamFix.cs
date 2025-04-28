@@ -2,7 +2,7 @@ using MelonLoader;
 using UnityEngine;
 using HarmonyLib;
 
-namespace OldEndingRestoration {
+namespace OldEndingRestoration.primary {
     [HarmonyPatch(typeof(TriggerArea), "RunTrigger")]
     public static class TriggerArea_Patch {
         private static bool alreadyTriggered = false;
